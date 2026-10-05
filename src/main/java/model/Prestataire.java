@@ -1,24 +1,17 @@
 package model;
 
-import java.util.ArrayList;
-
 public class Prestataire extends Intervenant {
 
     private boolean forfait;
-    private Double coutJournalier = 550.0;
+    private Double coutJournalier;
     private Societe societe;
 
     public Prestataire() {
+        super();
     }
 
-    public Prestataire(boolean forfait, Double coutJournalier, Societe societe) {
-        this.forfait = forfait;
-        this.coutJournalier = coutJournalier;
-        this.societe = societe;
-    }
-
-    public Prestataire(int id, String nom, String prenom, Categorie categorie, ArrayList<Projet> lesProjets, ArrayList<Affectation> lesAffectations, boolean forfait, Double coutJournalier, Societe societe) {
-        super(id, nom, prenom, categorie, lesProjets, lesAffectations);
+    public Prestataire(int id, String nom, String prenom, boolean forfait, Double coutJournalier, Societe societe) {
+        super(id, nom, prenom);
         this.forfait = forfait;
         this.coutJournalier = coutJournalier;
         this.societe = societe;
@@ -48,5 +41,13 @@ public class Prestataire extends Intervenant {
         this.societe = societe;
     }
 
+
+    @Override
+    public double calculCoutProjet(int nbJours) {
+        if (this.forfait && this.societe != null) {
+            return nbJours * this.societe.getCoutJournalier();
+        }
+        return nbJours * this.coutJournalier;
+    }
 
 }

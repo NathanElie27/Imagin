@@ -1,25 +1,19 @@
 package model;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class Salarie extends Intervenant {
 
     private LocalDate dtEmbauche;
     private int echelon;
+    private final Double coutFixe = 550.0;
 
     public Salarie() {
+        super();
     }
 
-    public void numEchelon() {}
-
-    public Salarie(LocalDate dtEmbauche, int echelon) {
-        this.dtEmbauche = dtEmbauche;
-        this.echelon = echelon;
-    }
-
-    public Salarie(int id, String nom, String prenom, Categorie categorie, ArrayList<Projet> lesProjets, ArrayList<Affectation> lesAffectations, LocalDate dtEmbauche, int echelon) {
-        super(id, nom, prenom, categorie, lesProjets, lesAffectations);
+    public Salarie(int id, String nom, String prenom, LocalDate dtEmbauche, int echelon) {
+        super(id, nom, prenom);
         this.dtEmbauche = dtEmbauche;
         this.echelon = echelon;
     }
@@ -40,8 +34,9 @@ public class Salarie extends Intervenant {
         this.echelon = echelon;
     }
 
-    public void numEchelon(int echelon){
-        System.out.println("employe num : " +echelon);
+    @Override
+    public double calculCoutProjet(int nbJours) {
+        return nbJours * coutFixe;
     }
 
 }

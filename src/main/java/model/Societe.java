@@ -9,13 +9,23 @@ public class Societe {
     private String adresse;
     private String copos;
     private String ville;
-    private Float coutJournalier;
+    private Double coutJournalier;
     private ArrayList<Prestataire> lesPrestataires;
 
     public Societe() {
+        super();
     }
 
-    public Societe(int id, String raisonSociale, String adresse, String copos, String ville, Float coutJournalier, ArrayList<Prestataire> lesPrestataires) {
+    public Societe(int id, String raisonSociale, String adresse, String copos, String ville, Double coutJournalier) {
+        this.id = id;
+        this.raisonSociale = raisonSociale;
+        this.adresse = adresse;
+        this.copos = copos;
+        this.ville = ville;
+        this.coutJournalier = coutJournalier;
+    }
+
+    public Societe(int id, String raisonSociale, String adresse, String copos, String ville, Double coutJournalier, ArrayList<Prestataire> lesPrestataires) {
         this.id = id;
         this.raisonSociale = raisonSociale;
         this.adresse = adresse;
@@ -65,11 +75,11 @@ public class Societe {
         this.ville = ville;
     }
 
-    public Float getCoutJournalier() {
+    public Double getCoutJournalier() {
         return coutJournalier;
     }
 
-    public void setCoutJournalier(Float coutJournalier) {
+    public void setCoutJournalier(Double coutJournalier) {
         this.coutJournalier = coutJournalier;
     }
 
@@ -80,7 +90,4 @@ public class Societe {
     public void setLesPrestataires(ArrayList<Prestataire> lesPrestataires) {
         this.lesPrestataires = lesPrestataires;
     }
-
-
-
 }
