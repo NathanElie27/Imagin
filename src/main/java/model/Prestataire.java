@@ -12,7 +12,13 @@ public class Prestataire extends Intervenant {
     }
 
     public Prestataire(boolean forfait, Float coutJournalier, Societe societe) {
-        super();
+        this.forfait = forfait;
+        this.coutJournalier = coutJournalier;
+        this.societe = societe;
+    }
+
+    public Prestataire(int id, String nom, String prenom, Categorie categorie, ArrayList<Projet> lesProjets, ArrayList<Affectation> lesAffectations, boolean forfait, Float coutJournalier, Societe societe) {
+        super(id, nom, prenom, categorie, lesProjets, lesAffectations);
         this.forfait = forfait;
         this.coutJournalier = coutJournalier;
         this.societe = societe;

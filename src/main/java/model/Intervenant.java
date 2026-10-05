@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class Intervenant {
+abstract class Intervenant {
 
     private int id;
     private String nom;
@@ -12,9 +12,11 @@ public class Intervenant {
     private ArrayList<Affectation> lesAffectations;
 
     public Intervenant() {
+        super();
     }
 
     public Intervenant(int id, String nom, String prenom, Categorie categorie, ArrayList<Projet> lesProjets, ArrayList<Affectation> lesAffectations) {
+        super();
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;

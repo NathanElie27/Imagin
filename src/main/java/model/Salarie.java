@@ -12,7 +12,12 @@ public class Salarie extends Intervenant {
     }
 
     public Salarie(LocalDate dtEmbauche, int echelon) {
-        super();
+        this.dtEmbauche = dtEmbauche;
+        this.echelon = echelon;
+    }
+
+    public Salarie(int id, String nom, String prenom, Categorie categorie, ArrayList<Projet> lesProjets, ArrayList<Affectation> lesAffectations, LocalDate dtEmbauche, int echelon) {
+        super(id, nom, prenom, categorie, lesProjets, lesAffectations);
         this.dtEmbauche = dtEmbauche;
         this.echelon = echelon;
     }
