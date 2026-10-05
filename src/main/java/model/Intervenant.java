@@ -5,14 +5,16 @@ public class Intervenant {
     private int id;
     private String nom;
     private String prenom;
+    private Categorie categorie;
 
     public Intervenant() {
     }
 
-    public Intervenant(int id, String nom, String prenom) {
+    public Intervenant(int id, String nom, String prenom, Categorie categorie) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
+        this.categorie = categorie;
     }
 
     public int getId() {
@@ -37,5 +39,13 @@ public class Intervenant {
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
     }
 }
