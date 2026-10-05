@@ -80,4 +80,5 @@ public class Societe {
     public void setLesPrestataires(ArrayList<Prestataire> lesPrestataires) {
         this.lesPrestataires = lesPrestataires;
     }
+
 }
