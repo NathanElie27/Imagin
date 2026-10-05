@@ -8,7 +8,7 @@ public class Intervenant {
     private String nom;
     private String prenom;
     private Categorie categorie;
-    private ArrayList<Projet> lesProjets;
+    private ArrayList<Projet> lesProjetsResponsables;
     private ArrayList<Affectation> lesAffectations;
 
     public Intervenant() {
@@ -19,7 +19,7 @@ public class Intervenant {
         this.nom = nom;
         this.prenom = prenom;
         this.categorie = categorie;
-        this.lesProjets = lesProjets;
+        this.lesProjetsResponsables = lesProjets;
         this.lesAffectations = lesAffectations;
     }
 
@@ -56,11 +56,11 @@ public class Intervenant {
     }
 
     public ArrayList<Projet> getLesProjets() {
-        return lesProjets;
+        return lesProjetsResponsables;
     }
 
     public void setLesProjets(ArrayList<Projet> lesProjets) {
-        this.lesProjets = lesProjets;
+        this.lesProjetsResponsables = lesProjets;
     }
 
     public ArrayList<Affectation> getLesAffectations() {

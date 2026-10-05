@@ -8,7 +8,7 @@ public class Projet {
     private String nom;
     private int nbJoursHPrevu;
     private Float budgetPrevu;
-    private Intervenant intervenant;
+    private Intervenant intervenantResponsable;
     private ArrayList<Affectation> lesAffectations;
 
     public Projet() {
@@ -19,7 +19,7 @@ public class Projet {
         this.nom = nom;
         this.nbJoursHPrevu = nbJoursHPrevu;
         this.budgetPrevu = budgetPrevu;
-        this.intervenant = intervenant;
+        this.intervenantResponsable = intervenant;
         this.lesAffectations = lesAffectations;
     }
 
@@ -56,11 +56,11 @@ public class Projet {
     }
 
     public Intervenant getIntervenant() {
-        return intervenant;
+        return intervenantResponsable;
     }
 
     public void setIntervenant(Intervenant intervenant) {
-        this.intervenant = intervenant;
+        this.intervenantResponsable = intervenant;
     }
 
     public ArrayList<Affectation> getLesAffectations() {

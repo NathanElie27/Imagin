@@ -7,18 +7,18 @@ public class Affectation {
     private String annee;
     private int semaine;
     private int tempsPasse;
-    private ArrayList<Intervenant> lesIntervenants;
-    private ArrayList<Projet> lesProjets;
+    private Intervenant intervenant;
+    private Projet projet;
 
     public Affectation() {
     }
 
-    public Affectation(String annee, int semaine, int tempsPasse, ArrayList<Intervenant> lesIntervenants, ArrayList<Projet> lesProjets) {
+    public Affectation(String annee, int semaine, int tempsPasse, Intervenant intervenant, Projet projet) {
         this.annee = annee;
         this.semaine = semaine;
         this.tempsPasse = tempsPasse;
-        this.lesIntervenants = lesIntervenants;
-        this.lesProjets = lesProjets;
+        this.intervenant = intervenant;
+        this.projet = projet;
     }
 
     public String getAnnee() {
@@ -45,19 +45,19 @@ public class Affectation {
         this.tempsPasse = tempsPasse;
     }
 
-    public ArrayList<Intervenant> getLesIntervenants() {
-        return lesIntervenants;
+    public Intervenant getIntervenant() {
+        return intervenant;
     }
 
-    public void setLesIntervenants(ArrayList<Intervenant> lesIntervenants) {
-        this.lesIntervenants = lesIntervenants;
+    public void setIntervenant(Intervenant intervenant) {
+        this.intervenant = intervenant;
     }
 
-    public ArrayList<Projet> getLesProjets() {
-        return lesProjets;
+    public Projet getProjet() {
+        return projet;
     }
 
-    public void setLesProjets(ArrayList<Projet> lesProjets) {
-        this.lesProjets = lesProjets;
+    public void setProjet(Projet projet) {
+        this.projet = projet;
     }
 }
