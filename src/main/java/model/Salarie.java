@@ -11,6 +11,8 @@ public class Salarie extends Intervenant {
     public Salarie() {
     }
 
+    public void numEchelon() {}
+
     public Salarie(LocalDate dtEmbauche, int echelon) {
         this.dtEmbauche = dtEmbauche;
         this.echelon = echelon;
@@ -41,4 +43,5 @@ public class Salarie extends Intervenant {
     public void numEchelon(int echelon){
         System.out.println("employe num : " +echelon);
     }
+
 }

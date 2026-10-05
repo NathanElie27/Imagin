@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class Intervenant {
+public abstract class Intervenant {
 
     private int id;
     private String nom;
@@ -72,4 +72,9 @@ public class Intervenant {
     public void setLesAffectations(ArrayList<Affectation> lesAffectations) {
         this.lesAffectations = lesAffectations;
     }
+
+    public abstract void numEchelon();
+
+    public abstract void calculCoutProjet();
+
 }
