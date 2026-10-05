@@ -32,4 +32,8 @@ public class Salarie extends Intervenant {
     public void setEchelon(int echelon) {
         this.echelon = echelon;
     }
+
+    public void numEchelon(int echelon){
+        System.out.println("employe nun : " +echelon);
+    }
 }
