@@ -4,13 +4,15 @@ public class Intervenant {
 
     private int id;
     private String nom;
+    private String prenom;
 
-    public Intervenant(int id) {
+    public Intervenant() {
     }
 
-    public Intervenant(int id, String nom) {
+    public Intervenant(int id, String nom, String prenom) {
         this.id = id;
         this.nom = nom;
+        this.prenom = prenom;
     }
 
     public int getId() {
@@ -21,11 +23,19 @@ public class Intervenant {
         this.id = id;
     }
 
+    public String getPrenom() {
+        return prenom;
+    }
+
     public String getNom() {
         return nom;
     }
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 }
