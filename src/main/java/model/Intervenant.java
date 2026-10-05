@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-abstract class Intervenant {
+public class Intervenant {
 
     private int id;
     private String nom;
